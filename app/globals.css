@@ -3,9 +3,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme {
-  --color-neutral-orange-50: oklch(0.9636 0.0184 35.96);
-}
 
 @theme inline {
   --color-background: var(--background);

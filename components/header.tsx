@@ -7,8 +7,8 @@ import { MobileMenu } from "./mobile-menu"
 
 export const Header = ({ className, ...props }: ComponentPropsWithoutRef<"header">) => {
   return (
-    <header className={cn("h-24", className)} {...props}>
-      <nav className="size-full p-12 container">
+    <header className={cn("h-24 z-10", className)} {...props}>
+      <nav className="size-full p-6 md:p-12 container">
         <ul className="size-full flex items-center justify-between ">
           <NavLink href={"/"}>
             <Logo className="w-28 md:w-36" />
