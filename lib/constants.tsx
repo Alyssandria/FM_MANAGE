@@ -1,70 +1,54 @@
-export const NAVLINKS = {
-  PRIMARY: [
-    {
-      NAME: "HOME",
-      CONTENT: "Home",
-      CLASSNAME: "",
-      INFOOTER: true,
-      INHEADER: false,
-    },
-    {
-      NAME: "PRICING",
-      CONTENT: "Pricing",
-      CLASSNAME: "",
-      INFOOTER: true,
-      INHEADER: true,
-    },
-    {
-      NAME: "PRODUCT",
-      CONTENT: "Product",
-      CLASSNAME: "",
-      INFOOTER: true,
-      INHEADER: true,
-    },
-    {
-      NAME: "ABOUT_ US",
-      CONTENT: "About us",
-      CLASSNAME: "",
-      INFOOTER: true,
-      INHEADER: true,
-    },
-    {
-      NAME: "CAREERS",
-      CONTENT: "Careers",
-      CLASSNAME: "",
-      INFOOTER: true,
-      INHEADER: true,
-    },
-    {
-      NAME: "COMMUNITY",
-      CONTENT: "Community",
-      CLASSNAME: "",
-      INFOOTER: true,
-      INHEADER: true,
-    },
-    {
-      NAME: "CAREERS",
-      CONTENT: "Careers",
-      CLASSNAME: "",
-      INFOOTER: true,
-      INHEADER: true,
-    },
-    {
-      NAME: "COMMUNITY",
-      CONTENT: "Community",
-      CLASSNAME: "",
-      INFOOTER: true,
-      INHEADER: true,
-    },
-    {
-      NAME: "PRIVACY_POLICY",
-      CONTENT: "Privacy Policy",
-      CLASSNAME: "",
-      INFOOTER: true,
-      INHEADER: true,
-    }
-  ],
-}
+export const NAVLINKS = [
+  {
+    NAME: "HOME",
+    CONTENT: "Home",
+    CLASSNAME: "",
+    INFOOTER: true,
+    INHEADER: false,
+  },
+  {
+    NAME: "PRICING",
+    CONTENT: "Pricing",
+    CLASSNAME: "",
+    INFOOTER: true,
+    INHEADER: true,
+  },
+  {
+    NAME: "PRODUCT",
+    CONTENT: "Product",
+    CLASSNAME: "",
+    INFOOTER: true,
+    INHEADER: true,
+  },
+  {
+    NAME: "ABOUT_ US",
+    CONTENT: "About us",
+    CLASSNAME: "",
+    INFOOTER: true,
+    INHEADER: true,
+  },
+  {
+    NAME: "CAREERS",
+    CONTENT: "Careers",
+    CLASSNAME: "",
+    INFOOTER: true,
+    INHEADER: true,
+  },
+  {
+    NAME: "COMMUNITY",
+    CONTENT: "Community",
+    CLASSNAME: "",
+    INFOOTER: true,
+    INHEADER: true,
+  },
+  {
+    NAME: "PRIVACY_POLICY",
+    CONTENT: "Privacy Policy",
+    CLASSNAME: "",
+    INFOOTER: true,
+    INHEADER: false,
+  }
+]
 
 export const MAIN = {
   HERO: {
