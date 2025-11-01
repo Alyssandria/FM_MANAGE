@@ -2,6 +2,13 @@ import { MAIN } from "@/lib/constants";
 import HeroIllustration from "./assets/illustration-intro.svg";
 import Image from "next/image";
 import { NavLink } from "@/components/ui/nav-link";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 export default function Home() {
   return (
@@ -32,6 +39,17 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </section>
+      <section className="p-6">
+        <Carousel>
+          <CarouselContent>
+            <CarouselItem>1</CarouselItem>
+            <CarouselItem>2</CarouselItem>
+            <CarouselItem>3</CarouselItem>
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </section>
     </div>
   );
