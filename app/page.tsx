@@ -2,18 +2,13 @@ import { MAIN } from "@/lib/constants";
 import HeroIllustration from "./assets/illustration-intro.svg";
 import Image from "next/image";
 import { NavLink } from "@/components/ui/nav-link";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+import { TestimonialCarousel } from "@/components/testimonial-carousel";
+import patternBg from "./assets/bg-simplify-section-mobile.svg";
 
 export default function Home() {
   return (
-    <div className="container flex flex-col gap-8 md:p-12">
-      <section className="p-6 flex flex-col gap-6 justify-center items-center">
+    <div className="flex flex-col gap-8">
+      <section className="p-6 md:p-12 flex flex-col gap-6 justify-center items-center overflow-hidden md:flex-row-reverse">
         <div>
           <Image src={HeroIllustration} className="z-20 size-full" alt="Hero Illustration" />
         </div>
@@ -23,8 +18,8 @@ export default function Home() {
           <NavLink href={"/"} variant={"pill"} className="text-sm w-fit">Get Started</NavLink>
         </div>
       </section>
-      <section>
-        <div className="p-6 text-center flex flex-col gap-5 justify-center items-center">
+      <section className="p-6 container md:p-12">
+        <div className="text-center flex flex-col gap-5 justify-center items-center">
           <h2 className="text-primary-foreground text-3xl font-bold">{MAIN.FEATURES.TAGLINE}</h2>
           <p className="text-gray-400">{MAIN.FEATURES.SUBTITLE}</p>
         </div>
@@ -40,16 +35,19 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="p-6">
-        <Carousel>
-          <CarouselContent>
-            <CarouselItem>1</CarouselItem>
-            <CarouselItem>2</CarouselItem>
-            <CarouselItem>3</CarouselItem>
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+      <section className="container flex flex-col gap-10 p-6 md:p-12">
+        <div className="text-center flex flex-col gap-5 justify-center items-center">
+          <h1 className="text-primary-foreground text-3xl font-bold">{MAIN.TESTIMONIALS.TAGLINE}</h1>
+        </div>
+        <TestimonialCarousel />
+        <NavLink href={"/"} variant={"pill"} className="self-center text-sm w-fit">Get Started</NavLink>
+      </section>
+      <section className="relative bg-primary py-12 flex flex-col justify-center items-center gap-4">
+        <Image src={patternBg} className="z-10 absolute left-0 object-contain" alt="Aestethic" />
+        <div className="p-6 text-center">
+          <h2 className="text-secondary-foreground text-4xl font-bold">{MAIN.MARKETING.TAGLINE}</h2>
+        </div>
+        <NavLink href={"/"} variant={"pill"} className="self-center text-sm w-fit bg-white text-primary font-bold">Get Started</NavLink>
       </section>
     </div>
   );
