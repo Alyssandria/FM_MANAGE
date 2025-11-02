@@ -1,3 +1,9 @@
+import { FacebookIcon } from "@/components/ui/icons/icon-facebook"
+import { InstagramIcon } from "@/components/ui/icons/icon-instagram"
+import { PinterestIcon } from "@/components/ui/icons/icon-pinterest"
+import { TwitterIcon } from "@/components/ui/icons/icon-twitter"
+import { YoutubeIcon } from "@/components/ui/icons/icon-youtube"
+
 export const NAVLINKS = [
   {
     NAME: "HOME",
@@ -48,6 +54,29 @@ export const NAVLINKS = [
     INFOOTER: true,
     INHEADER: false,
   }
+]
+
+export const SOCIALS = [
+  {
+    NAME: "Facebook",
+    ICON: <FacebookIcon />
+  },
+  {
+    NAME: "Youtube",
+    ICON: <YoutubeIcon />
+  },
+  {
+    NAME: "Twitter",
+    ICON: <TwitterIcon />
+  },
+  {
+    NAME: "Pinterest",
+    ICON: <PinterestIcon />
+  },
+  {
+    NAME: "Instagram",
+    ICON: <InstagramIcon />
+  },
 ]
 
 export const MAIN = {

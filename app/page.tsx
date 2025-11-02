@@ -4,6 +4,7 @@ import Image from "next/image";
 import { NavLink } from "@/components/ui/nav-link";
 import { TestimonialCarousel } from "@/components/testimonial-carousel";
 import patternBg from "./assets/bg-simplify-section-mobile.svg";
+import heroPattern from "./assets/bg-tablet-pattern.svg";
 
 export default function Home() {
   return (
@@ -18,21 +19,24 @@ export default function Home() {
           <NavLink href={"/"} variant={"pill"} className="text-sm w-fit">Get Started</NavLink>
         </div>
       </section>
-      <section className="p-6 container md:p-12">
-        <div className="text-center flex flex-col gap-5 justify-center items-center">
-          <h2 className="text-primary-foreground text-3xl font-bold">{MAIN.FEATURES.TAGLINE}</h2>
-          <p className="text-gray-400">{MAIN.FEATURES.SUBTITLE}</p>
-        </div>
-        <div className="text-center flex flex-col gap-10 justify-center items-center">
-          {MAIN.FEATURES.CARDS.map(el => (
-            <div key={el.STEP} className="flex flex-col gap-4 w-full pl-6">
-              <div className="rounded-l-full gap-2 flex items-center bg-neutral-orange-50 pr-6">
-                <span className="w-fit text-sm font-bold text-left flex bg-primary text-secondary-foreground px-6 py-2.5 rounded-full">{el.STEP}</span>
-                <span className="text-primary-foreground font-bold text-sm md:text-base">{el.TITLE}</span>
+      <section className="relative">
+        <Image src={heroPattern} className="-z-20 -right-62 -top-82 absolute object-contain" alt="Aestethic" />
+        <div className="flex flex-col gap-14 md:p-12">
+          <div className="container p-6 md:p-12 text-center flex flex-col gap-5 justify-center items-center">
+            <h2 className="text-primary-foreground text-3xl font-bold">{MAIN.FEATURES.TAGLINE}</h2>
+            <p className="text-gray-400">{MAIN.FEATURES.SUBTITLE}</p>
+          </div>
+          <div className="text-center flex flex-col gap-10 justify-center items-center">
+            {MAIN.FEATURES.CARDS.map(el => (
+              <div key={el.STEP} className="flex flex-col gap-4 w-full pl-6">
+                <div className="rounded-l-full gap-2 flex items-center bg-neutral-orange-50 pr-6">
+                  <span className="w-fit text-sm font-bold text-left flex bg-primary text-secondary-foreground px-6 py-2.5 rounded-full">{el.STEP}</span>
+                  <span className="text-primary-foreground font-bold text-sm md:text-base">{el.TITLE}</span>
+                </div>
+                <p className="pr-6 md:pr-12 text-gray-400 text-left text-sm md:text-base">{el.CONTENT}</p>
               </div>
-              <p className="text-gray-400 text-left text-sm md:text-base">{el.CONTENT}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
       <section className="container flex flex-col gap-10 p-6 md:p-12">
