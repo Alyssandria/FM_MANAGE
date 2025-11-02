@@ -28,7 +28,7 @@ export default function RootLayout({
       >
         <div className="relative size-full flex flex-col min-h-[calc(100vh-96px)] overflow-hidden">
           <Header />
-          <Image src={patternBg} className="-z-10 absolute -top-10 -right-10 md:-right-25 object-contain" alt="Aestethic" />
+          <Image src={patternBg} className="-z-10 absolute md:-top-60 -top-10 -right-10 md:-right-25 object-contain" alt="Aestethic" />
           <main className="flex-1">
             {children}
           </main>

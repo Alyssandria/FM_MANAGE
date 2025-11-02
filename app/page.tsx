@@ -9,31 +9,45 @@ import heroPattern from "./assets/bg-tablet-pattern.svg";
 export default function Home() {
   return (
     <div className="flex flex-col gap-8">
-      <section className="p-6 md:p-12 flex flex-col gap-6 justify-center items-center overflow-hidden md:flex-row-reverse">
-        <div>
-          <Image src={HeroIllustration} className="z-20 size-full" alt="Hero Illustration" />
+      <section className="container p-6 md:p-12 flex flex-col gap-6 justify-center items-center overflow-hidden lg:flex-row-reverse">
+        <div className="size-full">
+          <Image src={HeroIllustration} className="max-h-[500px] object-contain z-20 size-full" alt="Hero Illustration" />
         </div>
-        <div className="text-center flex flex-col gap-5 justify-center items-center">
-          <h1 className="text-primary-foreground text-4xl font-bold">{MAIN.HERO.TAGLINE}</h1>
-          <p className="text-gray-400">{MAIN.HERO.SUBTITLE}</p>
-          <NavLink href={"/"} variant={"pill"} className="text-sm w-fit">Get Started</NavLink>
+        <div className="size-full text-center lg:text-left lg:justify-start lg:gap-12 flex flex-col gap-5 justify-center items-center">
+          <h1 className="text-primary-foreground text-4xl lg:w-fit lg:text-6xl font-bold">{MAIN.HERO.TAGLINE}</h1>
+          <p className="text-gray-400 lg:self-start lg:w-3/5">{MAIN.HERO.SUBTITLE}</p>
+          <NavLink href={"/"} variant={"pill"} className="text-sm w-fit lg:self-start">Get Started</NavLink>
         </div>
       </section>
       <section className="relative">
-        <Image src={heroPattern} className="-z-20 -right-62 -top-82 absolute object-contain" alt="Aestethic" />
-        <div className="flex flex-col gap-14 md:p-12">
-          <div className="container p-6 md:p-12 text-center flex flex-col gap-5 justify-center items-center">
-            <h2 className="text-primary-foreground text-3xl font-bold">{MAIN.FEATURES.TAGLINE}</h2>
-            <p className="text-gray-400">{MAIN.FEATURES.SUBTITLE}</p>
+        <Image src={heroPattern} className="
+          max-md:max-w-[375px]
+          -z-20 
+          -right-62 
+          -top-82 
+          absolute 
+          object-contain 
+          md:top-auto 
+          md:right-auto 
+          md:-bottom-130
+          md:-left-125"
+          alt="Aestethic"
+        />
+        <div className="container flex flex-col gap-14 md:p-12 md:flex-row">
+          <div className="p-6 md:p-12 text-center flex flex-col gap-5 md:gap-8 justify-center items-center md:justify-start md:text-left md:py-0">
+            <h2 className="text-primary-foreground text-3xl font-bold md:text-4xl">{MAIN.FEATURES.TAGLINE}</h2>
+            <p className="text-gray-400 lg:w-4/5 md:self-start">{MAIN.FEATURES.SUBTITLE}</p>
           </div>
           <div className="text-center flex flex-col gap-10 justify-center items-center">
             {MAIN.FEATURES.CARDS.map(el => (
-              <div key={el.STEP} className="flex flex-col gap-4 w-full pl-6">
-                <div className="rounded-l-full gap-2 flex items-center bg-neutral-orange-50 pr-6">
+              <div key={el.STEP} className="grid grid-cols-[fit-content(100%)_1fr] md:gap-4 max-md:place-items-center w-full gap-y-6 pl-6">
+                <div className="max-md:bg-neutral-orange-50 max-md:rounded-l-full">
                   <span className="w-fit text-sm font-bold text-left flex bg-primary text-secondary-foreground px-6 py-2.5 rounded-full">{el.STEP}</span>
-                  <span className="text-primary-foreground font-bold text-sm md:text-base">{el.TITLE}</span>
                 </div>
-                <p className="pr-6 md:pr-12 text-gray-400 text-left text-sm md:text-base">{el.CONTENT}</p>
+                <div className="grid max-md:place-items-center md:items-center text-primary-foreground size-full max-md:bg-neutral-orange-50">
+                  <span className="text-left font-bold text-sm md:text-base">{el.TITLE}</span>
+                </div>
+                <p className="pr-6 md:pr-0 text-gray-400 text-left text-sm col-span-full md:col-start-2 md:text-base">{el.CONTENT}</p>
               </div>
             ))}
           </div>
