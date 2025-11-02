@@ -23,7 +23,7 @@ export const Footer = () => {
               </ul>
             </nav>
           </div>
-          <div className="flex flex-col items-center justify-center gap-8 w-full">
+          <div className="flex flex-col items-center justify-center gap-12 w-full">
             <div className="w-full flex items-center justify-between">
               {SOCIALS.map(el => (
                 <div className="size-8" key={el.NAME}>
@@ -36,7 +36,7 @@ export const Footer = () => {
             </NavLink>
           </div>
         </div>
-        <span className="text-gray-700 block text-center">Copyright 2025. All Rights Reserved</span>
+        <span className="text-gray-700 block text-xs text-center">Copyright 2025. All Rights Reserved</span>
       </div>
     </footer>
   )
