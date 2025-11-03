@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <footer className="bg-[#1e1e26] w-full p-6 py-12 md:p-12">
       <div className="container flex flex-col gap-12">
-        <div className="flex flex-col gap-14">
+        <div className="flex flex-col gap-14 md:flex-row-reverse md:justify-between">
           <div className="flex items-center gap-4">
             <input className="w-full block py-2.5 px-6 bg-white rounded-full max-md:placeholder:text-xs max-md:text-xs" placeholder="Updates in your inbox..." />
             <Button className="text-secondary-foreground py-2.5 px-6.5 rounded-full">GO</Button>
@@ -23,8 +23,8 @@ export const Footer = () => {
               </ul>
             </nav>
           </div>
-          <div className="flex flex-col items-center justify-center gap-12 w-full">
-            <div className="w-full flex items-center justify-between">
+          <div className="flex flex-col items-center justify-center gap-12 w-full md:flex-col-reverse ">
+            <div className="w-full flex items-center justify-between md:justify-start md:gap-4">
               {SOCIALS.map(el => (
                 <div className="size-8" key={el.NAME}>
                   {el.ICON}

@@ -3,7 +3,8 @@ import HeroIllustration from "./assets/illustration-intro.svg";
 import Image from "next/image";
 import { NavLink } from "@/components/ui/nav-link";
 import { TestimonialCarousel } from "@/components/testimonial-carousel";
-import patternBg from "./assets/bg-simplify-section-mobile.svg";
+import simplifyPatternMobile from "./assets/bg-simplify-section-mobile.svg";
+import simplifyPatternDesktop from "./assets/bg-simplify-section-desktop.svg";
 import heroPattern from "./assets/bg-tablet-pattern.svg";
 
 export default function Home() {
@@ -34,7 +35,7 @@ export default function Home() {
           alt="Aestethic"
         />
         <div className="container flex flex-col gap-14 md:p-12 md:flex-row">
-          <div className="p-6 md:p-12 text-center flex flex-col gap-5 md:gap-8 justify-center items-center md:justify-start md:text-left md:py-0">
+          <div className="p-6 text-center flex flex-col gap-5 md:gap-8 justify-center items-center md:justify-start md:text-left md:p-0">
             <h2 className="text-primary-foreground text-3xl font-bold md:text-4xl">{MAIN.FEATURES.TAGLINE}</h2>
             <p className="text-gray-400 lg:w-4/5 md:self-start">{MAIN.FEATURES.SUBTITLE}</p>
           </div>
@@ -60,12 +61,15 @@ export default function Home() {
         <TestimonialCarousel />
         <NavLink href={"/"} variant={"pill"} className="self-center text-sm w-fit">Get Started</NavLink>
       </section>
-      <section className="relative bg-primary py-12 flex flex-col justify-center items-center gap-4">
-        <Image src={patternBg} className="z-10 absolute left-0 object-contain" alt="Aestethic" />
-        <div className="p-6 text-center">
-          <h2 className="text-secondary-foreground text-4xl font-bold">{MAIN.MARKETING.TAGLINE}</h2>
+      <section className="relative bg-primary">
+        <Image src={simplifyPatternMobile} className="md:hidden z-10 absolute left-0 object-contain" alt="Aestethic" />
+        <Image src={simplifyPatternDesktop} className="z-10 size-full absolute top-0 left-0 object-contain" alt="Aestethic" />
+        <div className="container p-6 md:p-12 flex flex-col justify-center items-center gap-4 md:flex-row md:justify-between">
+          <div className="p-6 text-center md:w-1/2 md:text-left">
+            <h2 className="text-secondary-foreground text-4xl font-bold">{MAIN.MARKETING.TAGLINE}</h2>
+          </div>
+          <NavLink href={"/"} variant={"pill"} className="self-center text-sm w-fit bg-white text-primary font-bold">Get Started</NavLink>
         </div>
-        <NavLink href={"/"} variant={"pill"} className="self-center text-sm w-fit bg-white text-primary font-bold">Get Started</NavLink>
       </section>
     </div>
   );

@@ -32,7 +32,7 @@ export const TestimonialCarousel = () => {
       <Carousel setApi={setApi} opts={{ loop: true }}>
         <CarouselContent>
           {MAIN.TESTIMONIALS.CARDS.map((el, i) => (
-            <CarouselItem key={i} className={cn("relative", el.CLASSNAME)}>
+            <CarouselItem key={i} className={cn("relative md:basis-1/2", el.CLASSNAME)}>
               <div className="px-8 pb-12 w-full bg-gray-100 mt-16 relative">
                 <Image src={el.AVATAR} alt="Testimonial Avatar" width={80} height={80} className="absolute -top-1/8 left-1/2 -translate-x-1/2" />
                 <div className="flex flex-col items-center justify-center gap-6">
